@@ -89,7 +89,7 @@ p {
 }
 
 header {
-    background-image: url(entetegirls.jpg);
+    background-image: url(../imgFiles/entetegirls.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;

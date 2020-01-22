@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="Code.css">
+<link rel="stylesheet" type="text/css" href="cssFiles/Code.css">
 <head>
 	<title></title>
 </head>
 <body>
 <header>
-<img id="logo" src="logo.jpg" />
+<img id="logo" src="imgFiles/logo.jpg" />
 <div class="menu">
 <input class="burger" type="checkbox">
     <nav>
