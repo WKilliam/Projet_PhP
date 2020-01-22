@@ -1,3 +1,4 @@
 <footer>
-    <span class="title">Team Production</span>
+    <img id=super src="imgFiles/superwoman.png" />
+    <span class="teamName">@GirlsRunTheWorld</span>
 </footer>

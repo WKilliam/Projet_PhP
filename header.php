@@ -3,9 +3,11 @@
    <div class="menu">
    <input class="burger" type="checkbox">
     <nav>
-       <a href="#">1.<i class="material-icons">Team</i>Membre</a>
-        <a href="#">2.<i class="material-icons">Production du Projet</i>Production</a>
-        <a href="#">3.<i class="material-icons">Base de Donnée</i>Data</a>
+        <div class="lala"><i class="material-icons">Team</i></div>
+        <div class="lala"><i class="material-icons">Avancement du Projet</i></div>
+        <a class="lala" href="#"><i class="material-icons">Exercices</i></a>
+        <a class="lala" href="#"><i class="material-icons">Mes contacts</i></a>
+        <a class="lala" href="#"><i class="material-icons">LaPoste</i></a>
     </nav>
     </div>
 </header>
