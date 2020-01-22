@@ -32,15 +32,34 @@ class Calcul
             }
         }
     
-	}
-
+    }
+    
 	public function dateElevement($n){
-		echo "L'événement a eu lieu le ";
+        $resultTime = time() + 3600 - $n;
+        $mydate = date('H:i:s:n:j:Y',$resultTime);
+        echo "L'événement a eu lieu le ".$mydate;
 	}
 
-	public function calculerPetitNombr($n1,$n2,$n3){
+	public function calculerPetitNombr($n){
 
-	}
+        $result=999999999999999999999999999;
+        // (5,6,2)
+        $tab= preg_split("[/]", $n);
+        // [0->5,1->6,2->2]
+        foreach($tab as $value){
+            switch ($value) {
+                case $value<$result:
+                    $result = $value;
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+        echo $result;
+
+    }
 
 	public function chiffreRomain($n){
 

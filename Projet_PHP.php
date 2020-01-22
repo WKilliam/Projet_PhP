@@ -5,7 +5,11 @@
 	<title></title>
 </head>
 <body>
-<?php include 'header.php' ?>
+<?php include 'header.php';
+
+echo time();
+?>
+
 <ul>
     <li>Yuyuan Wu</li>
     <li>Teddy Villars</li>
@@ -13,6 +17,6 @@
 </ul>
 <p>Avancement du projet</p>
 <p>Détail de l'avancement</p>
-<?php include 'footer.php' ?>
+<?php include 'footer.php';?>
 </body>
 </html>
