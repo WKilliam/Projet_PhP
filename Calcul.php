@@ -33,6 +33,30 @@ class Calcul
         }
     
 	}
+
+	public function dateElevement($n){
+		echo "L'événement a eu lieu le ";
+	}
+
+	public function calculerPetitNombr($n1,$n2,$n3){
+
+	}
+
+	public function chiffreRomain($n){
+
+	}
+
+	public function calculerFactorielle($n){
+
+	}
+
+	public function hexaDecimale($n){
+
+	}
+
+	public function binaire($n){
+		
+	}
 }
 
 ?>
