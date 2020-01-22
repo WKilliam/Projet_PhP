@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Comic');
 body {
     background: whitesmoke;
     font-family: 'Lato';
     color: black;
+}
+#btnvalider{
+    background-color: #f35edf;
+    font-family: 'Comic';
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.textStyleSub{
+    color: #f35edf;
+    height: 10px;
+
 }
 
 .lala {
