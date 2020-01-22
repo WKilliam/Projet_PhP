@@ -7,7 +7,7 @@ class Formulaire
 {
 
 	public function getInputTypeText($value){
-    echo '<label for="'.$value.'">'.$value.'</label>';
+    echo '<label for="'.$value.'">'.$value.' : </label>';
     echo '<input type="text" id="'.$value.'" name="'.$value.'">';
 	}
 
