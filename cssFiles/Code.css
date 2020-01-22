@@ -22,6 +22,7 @@ body {
     height: 10px;
     padding-left: 0;
     position: relative;
+    background-color: rgb(179, 245, 229);
 }
 
 .menu .title {
@@ -82,10 +83,6 @@ body {
 
 .menu .burger:checked+nav {
     height: calc(100vh - 50px);
-}
-
-p {
-    padding: 20px;
 }
 
 header {
