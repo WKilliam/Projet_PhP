@@ -171,6 +171,74 @@
     <br>
 </div>
 
+
+<div>
+    <form method="post"> 
+	<?php
+	    echo"#US10.1 - check si ton mail est valide : <br>"; 
+		$myForm101 = new Formulaire();
+		$myForm101->getInputTypeText("Saisir ton mail");
+		$myForm101->displayButton("submit","valider");
+
+	?>
+	</form>
+	<?php 
+        if(sizeof($_POST)>0){
+        	if($_POST["Saisir_ton_mail"]){
+        		$myCalcul101 = new Calcul();
+            	$myCalcul101->checkMail($_POST["Saisir_ton_mail"]);
+        	}         
+        }
+    ?>
+    <br>
+    <br>
+</div>
+
+<div>
+    <form method="post"> 
+	<?php
+	    echo"#US10.2 - check si ta date de naissance est valide : <br>"; 
+		$myForm102 = new Formulaire();
+		$myForm102->getInputTypeText("Saisir la date de naissance");
+		$myForm102->displayButton("submit","valider");
+
+	?>
+	</form>
+	<?php 
+        if(sizeof($_POST)>0){
+        	if($_POST["US102_-Saisir_la_date"]){
+        		$myCalcul102 = new Calcul();
+            	$myCalcul102->checkDate($_POST["Saisir_la_date_de_naissance"]);
+        	}         
+        }
+    ?>
+    <br>
+    <br>
+</div>
+
+<div>
+    <form method="post"> 
+	<?php
+	    echo"#US11 - Trier un tableau de nom à partir du seconde carectère : <br>"; 
+		$myForm11 = new Formulaire();
+		$myForm11->getInputTypeText("US11 -Saisir les prenoms");
+		$myForm11->displayButton("submit","valider");
+
+	?>
+	</form>
+	<?php 
+        if(sizeof($_POST)>0){
+        	if($_POST["US11_-Saisir_les_prenoms"]){
+        		$myCalcul11 = new Calcul();
+            	$myCalcul11->triNom($_POST["US11_-Saisir_les_prenoms"]);
+        	}         
+        }
+    ?>
+    <br>
+    <br>
+</div>
+
+
 </body>
 </html>
 

@@ -17,11 +17,6 @@ body {
     cursor: pointer;
 }
 
-.textStyleSub {
-    color: #f35edf;
-    height: 10px;
-}
-
 .lala {
     color: rgb(136, 12, 95);
     text-decoration: none;
@@ -64,7 +59,7 @@ body {
     display: block;
     letter-spacing: 1px;
     line-height: 2.5;
-    padding: 0 20px;
+    padding: 0 90px;
     width: 100%;
 }
 
@@ -82,9 +77,9 @@ body {
     cursor: pointer;
     font-family: 'Material Icons';
     font-size: 30px;
-    line-height: 90px;
+    line-height: 40px;
     padding-right: 0;
-    padding-top: 50px;
+    padding-top: 235px;
     position: absolute;
     top: 0;
     width: 10px;

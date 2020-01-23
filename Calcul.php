@@ -60,8 +60,32 @@ class Calcul
 
     }
 
-	public function chiffreRomain($n){
+	public function chiffreRomain($num){
 
+     
+        // Vérification de l'entier
+          $n = intval($num);
+          $res = '';
+
+          // Declaration du tableau
+          $tabDecEnRom = array('M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400,
+          'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40,
+          'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1,'II'=>2,'II'=>3,'VI'=>6,'VII'=>7,'VIII'=>8);
+         
+         
+        // Boucle de convertion			
+          	foreach ($tabDecEnRom as $romain => $valeur) 
+          {
+              $trouver = intval($n / $valeur);
+              
+              $n = $n % $valeur;
+              $res = str_repeat($romain, $trouver);
+              echo $res;
+
+              //echo $romain;
+             
+          }
+          
 	}
 
 	public function calculerFactorielle($n){
@@ -69,7 +93,7 @@ class Calcul
         for($i=1;$i<=$n;$i++){
             $result*=$i;
         }
-        echo "La factorielle de ".$n." est ".$result.".";
+        echo $result;
 	}
 
 	public function hexaDecimale($n){
@@ -155,6 +179,34 @@ class Calcul
             echo $resTabb[$j];
             }
         }
+	}
+
+	public function checkMail($mail){
+
+		if(strlen($mail)>=3){
+			
+			if(strstr($mail,'@')){ //dans la chaine $mail contien le @
+
+				if(strstr($mail,'.')){ //dans la chaine $mail contien le .
+					echo "votre mail est valide.";
+				}else{
+					echo "votre mail n'est pas valide, il n'y a pas de la lettre '.' deriere la lettre '@' dans votre mail.";
+				}
+			}else{
+				echo "votre mail n'est pas valide, il n'y a pas de la lettre '@' dans votre mail.";
+			}
+
+		}else{
+			echo "votre mail n'est pas valide, il y a mois de 3 caractères";
+		}
+	}
+
+	public function checkDate($n){
+		echo "string";
+	}
+
+	public function triNom($n){
+		echo "stirng";
 	}
 }
 
