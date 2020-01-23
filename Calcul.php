@@ -40,8 +40,7 @@ class Calcul
         echo "L'événement a eu lieu le ".$mydate;
 	}
 
-	public function calculerPetitNombr($n){
-
+	public function calculerPetitNombre($n){
         $result=999999999999999999999999999;
         // (5,6,2)
         $tab= preg_split("[/]", $n);
@@ -50,11 +49,11 @@ class Calcul
             switch ($value) {
                 case $value<$result:
                     $result = $value;
-                    break;
-                
+                break;
+            
                 default:
-                    # code...
-                    break;
+                    echo "Entrez des nombres différents.";
+                break;
             }
         }
         echo $result;

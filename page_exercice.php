@@ -46,7 +46,7 @@
 	</form>
 	<?php 
         if(sizeof($_POST)>0){
-        	if($_POST["US4_-Saisir_un_nombre"]){
+        	if($_POST["US4_-Saisir_un_nombre"]!= NULL){
         		$myCalcul1 = new Calcul();
             	$myCalcul1->dateElevement($_POST["US4_-Saisir_un_nombre"]);
         	}         
@@ -62,16 +62,16 @@
 	<?php
 	    echo"#US5 - calculer le plus petit nombre parmis les trois saisis : <br>"; 
 		$myForm5 = new Formulaire();
-		$myForm5->getInputTypeText("US5a -Saisir un nombre");
+		$myForm5->getInputTypeText("US5 -Saisir un nombre");
 		$myForm5->displayButton("submit","valider");
 
 	?>
 	</form>
 	<?php 
         if(sizeof($_POST)>0){
-        	if($_POST["US5a -Saisir un nombre"]){
+        	if($_POST["US5 -Saisir un nombre"]!= NULL){
         		$myCalcul5 = new Calcul();
-            	$myCalcul5->calculerPetitNombre($_POST["US5a -Saisir un nombre"]);
+            	$myCalcul5->calculerPetitNombre($_POST["US5 -Saisir un nombre"]);
         	}         
         }
     ?>
