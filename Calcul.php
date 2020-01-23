@@ -73,9 +73,7 @@ class Calcul
           'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1);
          
          
-        // Boucle de convertion
-
-			
+        // Boucle de convertion			
           	foreach ($tabDecEnRom as $romain => $valeur) 
           {
               $trouver = intval($n / $valeur);
@@ -104,6 +102,34 @@ class Calcul
 
 	public function binaire($n){
 		
+	}
+
+	public function checkMail($mail){
+
+		if(strlen($mail)>=3){
+			
+			if(strstr($mail,'@')){ //dans la chaine $mail contien le @
+
+				if(strstr($mail,'.')){ //dans la chaine $mail contien le .
+					echo "votre mail est valide.";
+				}else{
+					echo "votre mail n'est pas valide, il n'y a pas de la lettre '.' deriere la lettre '@' dans votre mail.";
+				}
+			}else{
+				echo "votre mail n'est pas valide, il n'y a pas de la lettre '@' dans votre mail.";
+			}
+
+		}else{
+			echo "votre mail n'est pas valide, il y a mois de 3 caractères";
+		}
+	}
+
+	public function checkDate($n){
+		echo "string";
+	}
+
+	public function triNom($n){
+		echo "stirng";
 	}
 }
 
