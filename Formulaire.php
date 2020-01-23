@@ -6,9 +6,9 @@
 		
 
 
-	   	public function getInputTypeText($value){
+	   	public function getInputTypeText($value,$placeholder){
 	        echo '<label for="'.$value.'">'.$value.'</label>';
-	        echo '<input type="text" id="'.$value.'" name="'.$value.'"><br>';
+	        echo '<input type="text" id="'.$value.'" name="'.$value.'"placeholder='.$placeholder.'"><br>';
 
 	    }
 
