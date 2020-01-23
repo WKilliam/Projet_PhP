@@ -92,16 +92,17 @@ class Calcul
 
 	public function binaire($n){
         $resTabb="";
-        $i=0;
-        while($n==0){
-            $resTabb[i]=$n%2;
-            $n=(int)$n/2;
-            $i++;
+        
+        if ($n>0){
+            for($i=0;(int)($n/2)>=1;$i=$i+1){
+                $resTabb[$i]=$n%2;
+                $n=(int)($n/2);
+            }
+            echo $n;
+            for($j=$i;$j>=0;$j=$j-1){
+            echo $resTabb[$j];
+            }
         }
-        for($i=sizeof($resTabb)-1;$i=0;$i--){
-            echo $resTabb[i];
-        }
-		
 	}
 }
 
