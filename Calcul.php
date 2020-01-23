@@ -66,10 +66,10 @@ class Calcul
 
 	public function calculerFactorielle($n){
         $result=1;
-        for($i;$i<=$n;$i++){
+        for($i=1;$i<=$n;$i++){
             $result*=$i;
         }
-        echo $result;
+        echo "La factorielle de ".$n." est ".$result.".";
 	}
 
 	public function hexaDecimale($n){
