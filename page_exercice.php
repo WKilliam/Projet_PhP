@@ -115,9 +115,9 @@
 	</form>
 	<?php 
         if(sizeof($_POST)>0){
-        	if($_POST["US7 -Saisir un nombre"]){
+        	if($_POST["US7_-Saisir_un_nombre"]){
         		$myCalcul7 = new Calcul();
-            	$myCalcul7->calculerFactorielle($_POST["US7 -Saisir un nombre"]);
+            	$myCalcul7->calculerFactorielle($_POST["US7_-Saisir_un_nombre"]);
         	}         
         }
     ?>
