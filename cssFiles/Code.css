@@ -4,6 +4,8 @@ body {
     background: whitesmoke;
     font-family: 'Lato';
     color: black;
+    size: 100%;
+    position: relative;
 }
 
 #btnvalider {
@@ -33,12 +35,13 @@ body {
     font-family: Arial;
     height: 10px;
     padding-left: 0;
-    position: relative;
     background-color: rgb(179, 245, 229);
+    z-index: 0;
 }
 
 .menu .title {
     font-size: 50px;
+    font-family: Arial;
     font-weight: bold;
     line-height: 300px;
     padding: 0 370px;
@@ -49,6 +52,7 @@ body {
     background: inherit;
     font-size: 20px;
     font-weight: bold;
+    font-family: Arial;
     height: 0;
     overflow: hidden;
     text-transform: uppercase;
@@ -57,6 +61,7 @@ body {
 
 .menu nav>* {
     display: block;
+    font-family: Arial;
     letter-spacing: 1px;
     line-height: 2.5;
     padding: 0 90px;
@@ -67,6 +72,7 @@ body {
     background: rgba(0, 0, 0, .2);
     border: none;
     color: #fff;
+    font-family: Arial;
 }
 
 .menu .burger {
@@ -87,6 +93,9 @@ body {
 
 .menu .burger:before {
     content: 'Menu';
+    position: fixed;
+    top: 75px;
+    font-family: Arial;
 }
 
 .menu .burger:checked:before {
@@ -101,8 +110,10 @@ header {
     background-image: url(../imgFiles/entetegirls.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
-    margin-top: 0;
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
 #logo {
@@ -114,14 +125,18 @@ header {
 footer {
     height: 200px;
     background-color: whitesmoke;
-    position: relative;
-    z-index: 1;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    position: absolute;
+    flex: auto;
 }
 
 #super {
     border-radius: 200px 200px 200px 200px;
     position: absolute;
-    z-index: 2;
+    bottom: 0;
+    z-index: 0;
 }
 
 .teamName {
@@ -129,4 +144,9 @@ footer {
     text-shadow: silver 3px 3px 5px;
     position: absolute;
     z-index: 3;
+}
+
+#contenu {
+    position: absolute;
+    bottom: 0;
 }
