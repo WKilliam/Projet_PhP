@@ -188,16 +188,16 @@ class Calcul
 			if(strstr($mail,'@')){ //dans la chaine $mail contien le @
 
 				if(strstr($mail,'.')){ //dans la chaine $mail contien le .
-					echo "votre mail est valide.";
+					echo "Votre mail est valide.";
 				}else{
-					echo "votre mail n'est pas valide, il n'y a pas de la lettre '.' deriere la lettre '@' dans votre mail.";
+					echo "Votre mail n'est pas valide, il n'y a pas de '.' derrière la lettre '@' dans votre mail.";
 				}
 			}else{
-				echo "votre mail n'est pas valide, il n'y a pas de la lettre '@' dans votre mail.";
+				echo "Votre mail n'est pas valide, il n'y a pas de la lettre '@' dans votre mail.";
 			}
 
 		}else{
-			echo "votre mail n'est pas valide, il y a mois de 3 caractères";
+			echo "Votre mail n'est pas valide, il y a moins de 3 caractères.";
 		}
 	}
 
