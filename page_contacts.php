@@ -17,7 +17,6 @@ require "Formulaire.php";
 
 $formu = new Formulaire();
 
-
 	echo $formu -> getInputTypeText("Nom");
     echo $formu -> getInputTypeText("Prenom");
     echo $formu -> getInputTypeText("DateNaissance");
@@ -37,17 +36,7 @@ require "Personnage.php";
 
 $checking = new Calcul();
 
-$str = str_split($_POST["Mail"]);
-echo $str[0]."<br>";
-
-
-echo $checking->checkMail($_POST["Mail"]);
-
-
-
-
-
-
+echo $checking->checkMail($_POST["Mail"]).'<br>';
 
 if(sizeof($_POST)>0){
 
@@ -63,11 +52,7 @@ echo $pers->getMail().'<br>';
 echo $pers->getAdresse().'<br>';
 }
 
-
-
 ?>
-
-
 
 <?php include 'footer.php' ?>
 </body>
