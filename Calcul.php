@@ -73,21 +73,73 @@ class Calcul
 	}
 
 	public function hexaDecimale($n){
-        $A=10;
-        $B=11;
-        $C=12;
-        $D=13;
-        $E=14;
-        $F=15;
-        $resTab="";
+        $resTab;
         $i=0;
-        while((int)$n/16>=1){
-            $resTab[i]=$n%16;
-            $n=(int)$n/16;
+        while((int)($n/16)>=1){
+            $resTab[$i]=$n%16;
+            $n=(int)($n/16);
             $i++;
         }
-        echo $resTab;
+        if ($n>9){
+            switch($n){
+                case $n=10:
+                    $n=A;
+                break;
 
+                case $n=11:
+                    $n=B;
+                break;
+
+                case $n=12:
+                    $n=C;
+                break;
+
+                case $n=13:
+                    $n=D;
+                break;
+
+                case $n=14:
+                    $n=E;
+                break;
+
+                case $n=15:
+                    $n=F;
+                break;
+            }
+        }
+        echo $n;
+        if(sizeof($resTab)>0){
+            for($j=$i;$j>=0;$j=$j-1){
+                if($resTab[$j]>9){
+                    switch($resTab[$j]){
+                        case $resTab[$j]=10:
+                            $resTab[$j]=A;
+                        break;
+
+                        case $resTab[$j]=11:
+                            $resTab[$j]=B;
+                        break;
+
+                        case $resTab[$j]=12:
+                            $resTab[$j]=C;
+                        break;
+
+                        case $resTab[$j]=13:
+                            $resTab[$j]=D;
+                        break;
+
+                        case $resTab[$j]=14:
+                            $resTab[$j]=E;
+                        break;
+
+                        case $resTab[$j]=15:
+                            $resTab[$j]=F;
+                        break;
+                    }
+                }
+                echo $resTab[$j]; 
+            }
+        }
 	}
 
 	public function binaire($n){

@@ -92,7 +92,7 @@
 	</form>
 	<?php 
         if(sizeof($_POST)>0){
-        	if($_POST["US6_-Saisir_un_nombre"]){
+        	if($_POST["US6_-Saisir_un_nombre"]!= NULL){
         		$myCalcul6 = new Calcul();
             	$myCalcul6->chiffreRomain($_POST["US6_-Saisir_un_nombre"]);
         	}         
@@ -115,7 +115,7 @@
 	</form>
 	<?php 
         if(sizeof($_POST)>0){
-        	if($_POST["US7_-Saisir_un_nombre"]){
+        	if($_POST["US7_-Saisir_un_nombre"]!= NULL){
         		$myCalcul7 = new Calcul();
             	$myCalcul7->calculerFactorielle($_POST["US7_-Saisir_un_nombre"]);
         	}         
@@ -138,7 +138,7 @@
 	</form>
 	<?php 
         if(sizeof($_POST)>0){
-        	if($_POST["US8_-Saisir_un_nombre"]){
+        	if($_POST["US8_-Saisir_un_nombre"]!= NULL){
         		$myCalcul8 = new Calcul();
             	$myCalcul8->hexaDecimale($_POST["US8_-Saisir_un_nombre"]);
         	}         
@@ -161,7 +161,7 @@
 	</form>
 	<?php 
         if(sizeof($_POST)>0){
-        	if($_POST["US9_-Saisir_un_nombre"]){
+        	if($_POST["US9_-Saisir_un_nombre"]!= NULL){
         		$myCalcul9 = new Calcul();
             	$myCalcul9->binaire($_POST["US9_-Saisir_un_nombre"]);
         	}         
