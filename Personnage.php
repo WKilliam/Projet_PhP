@@ -24,6 +24,11 @@ class Personnage{
 		
 	}
 
+	public function checkMailValue(){
+		$tab=explode(' ',$mail); 
+		return $tab[0];
+	}
+
 	public function getNom(){
 		return $this->nom;
 	}
