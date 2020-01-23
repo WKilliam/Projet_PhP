@@ -70,7 +70,6 @@
 	<?php 
         if(sizeof($_POST)>0){
         	if($_POST["US5_-Saisir_un_nombre"]!= NULL){
-        		echo "text";
         		$myCalcul5 = new Calcul();
             	$myCalcul5->calculerPetitNombre($_POST["US5_-Saisir_un_nombre"]);
         	}         

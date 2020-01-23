@@ -53,11 +53,10 @@ class Calcul
                 break;
             
                 default:
-                    echo "Entrez des nombres différents.";
                 break;
             }
         }
-        echo $result;
+        echo "Le plus petit nombre est ". $result;
 
     }
 
