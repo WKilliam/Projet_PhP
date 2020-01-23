@@ -37,7 +37,8 @@ class Calcul
 	public function dateElevement($n){
         $resultTime = time() + 3600 - $n;
         $mydate = date('H:i:s:n:j:Y',$resultTime);
-        echo "L'événement a eu lieu le ".$mydate;
+        $dateTab= preg_split("[:]",$mydate);
+        echo "L'événement a eu lieu le ".$dateTab[4]."/".$dateTab[3]."/".$dateTab[5]." à ".$dateTab[0]."h".$dateTab[1]."min".$dateTab[2]."s.";
 	}
 
 	public function calculerPetitNombre($n){
