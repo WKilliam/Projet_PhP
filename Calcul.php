@@ -73,10 +73,34 @@ class Calcul
 	}
 
 	public function hexaDecimale($n){
+        $A=10;
+        $B=11;
+        $C=12;
+        $D=13;
+        $E=14;
+        $F=15;
+        $resTab="";
+        $i=0;
+        while((int)$n/16>=1){
+            $resTab[i]=$n%16;
+            $n=(int)$n/16;
+            $i++;
+        }
+        echo $resTab;
 
 	}
 
 	public function binaire($n){
+        $resTabb="";
+        $i=0;
+        while($n==0){
+            $resTabb[i]=$n%2;
+            $n=(int)$n/2;
+            $i++;
+        }
+        for($i=sizeof($resTabb)-1;$i=0;$i--){
+            echo $resTabb[i];
+        }
 		
 	}
 }
