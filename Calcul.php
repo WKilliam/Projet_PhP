@@ -56,7 +56,7 @@ class Calcul
                 break;
             }
         }
-        echo "Le plus petit nombre est ". $result;
+        echo "Le plus petit nombre est ". $result.".";
 
     }
 
@@ -65,7 +65,11 @@ class Calcul
 	}
 
 	public function calculerFactorielle($n){
-
+        $result=1;
+        for($i;$i<=$n;$i++){
+            $result*=$i;
+        }
+        echo $result;
 	}
 
 	public function hexaDecimale($n){
