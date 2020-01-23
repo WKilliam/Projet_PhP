@@ -70,7 +70,7 @@ class Calcul
           // Declaration du tableau
           $tabDecEnRom = array('M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400,
           'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40,
-          'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1,'II'=>2,'II'=>3,'VI'=>6,'VII'=>7,'VIII'=>8);
+          'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1,'II'=>2,'III'=>3,'VI'=>6,'VII'=>7,'VIII'=>8);
          
          
         // Boucle de convertion			
@@ -124,8 +124,12 @@ class Calcul
 		}
 	}
 
-	public function checkDate($n){
-		echo "string";
+	public function checkDate($date){
+		if (preg_match('/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{2}$/', $date)) {
+    		echo "votre date de naissance est validé.";
+		} else {
+    		echo "votre date de naissance n'est pas validé.";
+		}
 	}
 
 	public function triNom($n){

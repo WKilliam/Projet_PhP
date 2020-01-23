@@ -206,7 +206,7 @@
 	</form>
 	<?php 
         if(sizeof($_POST)>0){
-        	if($_POST["US102_-Saisir_la_date"]){
+        	if($_POST["Saisir_la_date_de_naissance"]){
         		$myCalcul102 = new Calcul();
             	$myCalcul102->checkDate($_POST["Saisir_la_date_de_naissance"]);
         	}         
