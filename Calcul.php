@@ -97,11 +97,88 @@ class Calcul
 	}
 
 	public function hexaDecimale($n){
+        $resTab;
+        $i=0;
+        while((int)($n/16)>=1){
+            $resTab[$i]=$n%16;
+            $n=(int)($n/16);
+            $i++;
+        }
+        if ($n>9){
+            switch($n){
+                case $n=10:
+                    $n=A;
+                break;
 
+                case $n=11:
+                    $n=B;
+                break;
+
+                case $n=12:
+                    $n=C;
+                break;
+
+                case $n=13:
+                    $n=D;
+                break;
+
+                case $n=14:
+                    $n=E;
+                break;
+
+                case $n=15:
+                    $n=F;
+                break;
+            }
+        }
+        echo $n;
+        if(sizeof($resTab)>0){
+            for($j=$i;$j>=0;$j=$j-1){
+                if($resTab[$j]>9){
+                    switch($resTab[$j]){
+                        case $resTab[$j]=10:
+                            $resTab[$j]=A;
+                        break;
+
+                        case $resTab[$j]=11:
+                            $resTab[$j]=B;
+                        break;
+
+                        case $resTab[$j]=12:
+                            $resTab[$j]=C;
+                        break;
+
+                        case $resTab[$j]=13:
+                            $resTab[$j]=D;
+                        break;
+
+                        case $resTab[$j]=14:
+                            $resTab[$j]=E;
+                        break;
+
+                        case $resTab[$j]=15:
+                            $resTab[$j]=F;
+                        break;
+                    }
+                }
+                echo $resTab[$j]; 
+            }
+        }
 	}
 
 	public function binaire($n){
-		
+        $resTabb="";
+        
+        if ($n>0){
+            for($i=0;(int)($n/2)>=1;$i=$i+1){
+                $resTabb[$i]=$n%2;
+                $n=(int)($n/2);
+            }
+            echo $n;
+            for($j=$i;$j>=0;$j=$j-1){
+            echo $resTabb[$j];
+            }
+        }
 	}
 
 	public function checkMail($mail){
@@ -111,16 +188,16 @@ class Calcul
 			if(strstr($mail,'@')){ //dans la chaine $mail contien le @
 
 				if(strstr($mail,'.')){ //dans la chaine $mail contien le .
-					echo "votre mail est valide.";
+					echo "Votre mail est valide.";
 				}else{
-					echo "votre mail n'est pas valide, il n'y a pas de la lettre '.' deriere la lettre '@' dans votre mail.";
+					echo "Votre mail n'est pas valide, il n'y a pas de '.' derrière la lettre '@' dans votre mail.";
 				}
 			}else{
-				echo "votre mail n'est pas valide, il n'y a pas de la lettre '@' dans votre mail.";
+				echo "Votre mail n'est pas valide, il n'y a pas de la lettre '@' dans votre mail.";
 			}
 
 		}else{
-			echo "votre mail n'est pas valide, il y a mois de 3 caractères";
+			echo "Votre mail n'est pas valide, il y a moins de 3 caractères.";
 		}
 	}
 
