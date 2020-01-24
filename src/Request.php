@@ -50,7 +50,7 @@ class Request {
   public function getmybdd(){
     try {
       if ($this->bdd ===null){
-          $this->bdd = new PDO($this->type.':host='.$this->host.';dbname='.$this->dbname.'',$this->username, $this->password);
+          $this->bdd = new PDO($this->type.':host='.$this->host.';dbname='.$this->dbname.';charset=utf8',$this->username, $this->password);
       }
     } catch (PDOException $e) {
       print "Erreur ! Connection à la base de donné impossible".$e->getMessage()." <br/>";
@@ -65,7 +65,7 @@ class Request {
      */
   public function getAllRow($myTable){
     foreach($this->bdd->query('SELECT * FROM '. $myTable) as $row) {
-      print_r($row);
+      return $row;
     }
   }
 
