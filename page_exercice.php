@@ -238,7 +238,7 @@ include 'src/header.php';
 		<br>
 	</div>
 </section>
-<?php include 'src/footer.php'?>
+<?php include 'src/footer.php' ?>
 </body>
 </html>
 
