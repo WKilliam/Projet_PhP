@@ -28,11 +28,12 @@ include 'src/header.php';
     </form>
     <?php 
     $checking = new Calcul();
-    $verify =$checking->checkMail($_POST["Mail"]);
     $bdd = new Request('mysql', 'localhost', 'personnes', 'root', 'root');
     $bdd->getmybdd();
-    if($verify==true){
-        if(sizeof($_POST)>0){
+    
+    if(sizeof($_POST)>0){
+        $verify =$checking->checkMail($_POST["Mail"]);
+        if($verify==true){
             $pers = new Personnage($_POST["Nom"],$_POST["Prenom"],$_POST["DateNaissance"],$_POST["Sexe"],$_POST["Mail"],$_POST["Adresse"]);
             echo '<br>Vous avez créé le contact: <br>'.$pers->getNom().'<br>';
             echo $pers->getPrenom().'<br>';
@@ -41,10 +42,10 @@ include 'src/header.php';
             echo $pers->getMail().'<br>';
             echo $pers->getAdresse().'<br>';
             $bdd->setInsert($pers->getNom(),$pers->getPrenom(), $pers->getDateNaissance(), $pers->getSexe(), $pers->getMail(), $pers->getAdresse());
-            echo "toto";
+           
+        }else{
+            echo "Veuillez réessayer SVP.";
         }
-    }else{
-        echo "Veuillez réessayer SVP.";
     }
     return $bdd;
     ?>

@@ -9,6 +9,17 @@
 require "src/Request.php";
 require "src/Formulaire.php";
  ?>
+<?php
+// On crée notre array $coordonnees
+$coordonnees = array (
+    'Nom' => 'Wu',
+    'Prénom' => 'Yuyuan',
+    'DateNaissance' => '12/34/56',
+	'Sexe' => 'F',
+	'Mail' =>'yw@ei.fr',
+	'Adresse'=>'kjhl');
+?>
+
 <section class='contenu'>
 	<?php 
 	$bdd = new Request('mysql', 'localhost', 'personnes', 'root', 'root');
