@@ -5,11 +5,8 @@
 	<title></title>
 </head>
 <body>
-<?php include 'header.php';
-
-echo time();
-?>
-
+<?php include 'header.php'?>
+<section id=contenu>
 <ul>
     <li>Yuyuan Wu</li>
     <li>Teddy Villars</li>
@@ -17,6 +14,7 @@ echo time();
 </ul>
 <p>Avancement du projet</p>
 <p>Détail de l'avancement</p>
+</section>
 <?php include 'footer.php';?>
 </body>
 </html>

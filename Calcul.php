@@ -182,23 +182,28 @@ class Calcul
 	}
 
 	public function checkMail($mail){
+        $mailValid=false;
 
 		if(strlen($mail)>=3){
 			
-			if(strstr($mail,'@')){ //dans la chaine $mail contien le @
+			if(strstr($mail,'@')){ //dans la chaine $mail contient le @
 
-				if(strstr($mail,'.')){ //dans la chaine $mail contien le .
-					echo "Votre mail est valide.";
+				if(strstr($mail,'.')){ //dans la chaine $mail contient le .
+                    echo "Votre mail est valide.";
+                    $mailValid=true;
 				}else{
-					echo "Votre mail n'est pas valide, il n'y a pas de '.' derrière la lettre '@' dans votre mail.";
+                    echo "Votre mail n'est pas valide, il n'y a pas de '.' derrière la lettre '@' dans votre mail.";
+                    $mailValid=false;
 				}
 			}else{
-				echo "Votre mail n'est pas valide, il n'y a pas de la lettre '@' dans votre mail.";
+                echo "Votre mail n'est pas valide, il n'y a pas de la lettre '@' dans votre mail.";
+                $mailValid=false;
 			}
-
 		}else{
-			echo "Votre mail n'est pas valide, il y a moins de 3 caractères.";
-		}
+            echo "Votre mail n'est pas valide, il y a moins de 3 caractères.";
+            $mailValid=false;
+        }
+        return $mailValid;
 	}
 
 	public function checkDate($date){
