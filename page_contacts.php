@@ -52,8 +52,5 @@ include 'src/header.php';
 </section>   
 <?php include 'src/footer.php' ?>
 
-
-
-$contact[]
 </body>
 </html>

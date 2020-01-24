@@ -208,9 +208,9 @@ class Calcul
 
 	public function checkDate($date){
 		if (preg_match('/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{2}$/', $date)) {
-    		echo "votre date de naissance est validé.";
+    		echo "Votre date de naissance est valide.";
 		} else {
-    		echo "votre date de naissance n'est pas validé.";
+    		echo "Votre date de naissance n'est pas valide.";
 		}
 	}
 
