@@ -33,6 +33,7 @@ include 'src/header.php';
     
     if(sizeof($_POST)>0){
         $verify =$checking->checkMail($_POST["Mail"]);
+        $verifydate =$checking->checkDate($_POST["DateNaissance"]);
         if($verify==true){
             $pers = new Personnage($_POST["Nom"],$_POST["Prenom"],$_POST["DateNaissance"],$_POST["Sexe"],$_POST["Mail"],$_POST["Adresse"]);
             echo '<br>Vous avez créé le contact: <br>'.$pers->getNom().'<br>';
@@ -50,5 +51,9 @@ include 'src/header.php';
     ?>
 </section>   
 <?php include 'src/footer.php' ?>
+
+
+
+$contact[]
 </body>
 </html>
