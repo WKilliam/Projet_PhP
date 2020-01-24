@@ -221,20 +221,24 @@ class Calcul
 		$tab = explode(',', $n);
 		$taille = count($tab); // nombres total de chaines des prénoms
 
-		echo $tab[0]. "<br>";
-		echo $taille."<br>";
+		//echo $tab[0]. "<br>";
+		//echo $taille."<br>";
 		
 
 		
   		for($i = 0; $i < $taille; $i++)
   		{
-  			echo $tab[i]. "<br>";
-  			echo strlen($tab[i]);
-  			for($j = 0; $j < strlen($tab[i]); $j++){ // parcourir la longeur de chaques chaines 
+  			//echo $tab[$i]. "<br>";
+  			//echo strlen($tab[$i]);
+  			for($j = 0; $j < strlen($tab[$i]); $j++){ // parcourir la longeur de chaques chaines 
 
-  				echo "string";
+  				echo $tab[$i][1];
+  				//if($tab[$i][1])
+
   				if(substr($tab[$i], 1)>substr($tab[$i-1], 1)){ //comparer les 2emes lettres de tous les chaines de caractères
-					echo $tab[$i] . ",";
+					//echo $tab[$i] . ",";
+					echo substr($tab[$i], 1);
+
   				}
   			}
     		/*
