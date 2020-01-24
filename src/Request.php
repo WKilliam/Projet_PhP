@@ -65,7 +65,7 @@ class Request {
      */
   public function getAllRow($myTable){
     foreach($this->bdd->query('SELECT * FROM '. $myTable) as $row) {
-      return $row;
+      print_r ($row);
     }
   }
 
@@ -82,8 +82,7 @@ class Request {
      * @return bool
      */
   public function setInsert($nom, $prenom, $naissance, $sexe, $mail, $adresse){
-      $query="INSERT INTO `Contacts`("."`Nom`, `Prenom`, `DateNaissance`, `Sexe`, `Mail`, `Adresse`".") VALUES (".$nom.", ".$prenom.", ".$naissance.", ".$sexe.", ".$mail.", ".$adresse.")";
-      //INSERT INTO `Contacts` (" . "`nom`, `prenom`, `naissance`, `sexe`, `mail`, `adresse` ".") VALUES ('".$nom . "', '".$prenom . "', '".$naissance."', '".$sexe . "', '".$mail . "', '".$adresse."')";
+      $query="INSERT INTO `Contacts`("."`Nom`, `Prenom`, `DateNaissance`, `Sexe`, `Mail`, `Adresse`".") VALUES ('".$nom."', '".$prenom."', '".$naissance."', '".$sexe."', '".$mail."', '".$adresse."')";
       // pour comprendre à quoi sert une requête préparé et son execution : http://php.net/manual/fr/pdo.prepared-statements.php
       $req = $this->bdd->prepare($query);
       // echo $query;
