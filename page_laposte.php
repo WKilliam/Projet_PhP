@@ -11,13 +11,10 @@ require "src/Formulaire.php";
  ?>
 <?php
 // On crée notre array $coordonnees
-$coordonnees = array (
-    'Nom' => 'Wu',
-    'Prénom' => 'Yuyuan',
-    'DateNaissance' => '12/34/56',
-	'Sexe' => 'F',
-	'Mail' =>'yw@ei.fr',
-	'Adresse'=>'kjhl');
+$contacts= array(array('Nom'=>'Wu','Prenom'=>'Yuyuan','DateNaissance'=>'12/34/56','Sexe'=>'F','Mail'=>'yw@ei.fr','Adresse'=>'kjhl'),
+array('Nom'=>'Villars','Prenom'=>'Teddy','DateNaissance'=>'23/45/67','Sexe'=>'M','Mail'=>'tv@ei.fr','Adresse'=>'hjgk'),
+array('Nom'=>'Rojas','Prenom'=>'Tania','DateNaissance'=>'34/56/78','Sexe'=>'F','Mail'=>'tr@ei.fr','Adresse'=>'ljhkjh'));
+
 ?>
 
 <section class='contenu'>
@@ -29,8 +26,8 @@ $coordonnees = array (
 	<FORM method= "post">
 	<?php 
 	$formu = new Formulaire();
-	echo $formu->dropdownList('Destinataire',$dest).'<br><br>';
-	echo $formu->dropdownList('Expéditeur',$exp).'<br><br>';
+	echo $formu->dropdownList('Destinataire',$contacts[$Nom]).'<br><br>';
+	echo $formu->dropdownList('Expéditeur',$contacts[$Nom]).'<br><br>';
 	echo $formu->checkbox('Timbre Prioritaire').'<br>';
 	echo $formu->checkbox('Confidentiel');
 	?>

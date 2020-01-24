@@ -218,7 +218,7 @@ class Calcul
 		
 
 		
-		$tab = explode(',', $n);
+		/*$tab = explode(',', $n);
 		$taille = count($tab); // nombres total de chaines des prénoms
 
 		//echo $tab[0]. "<br>";
@@ -254,9 +254,8 @@ class Calcul
       			}
     		}
     		*/
-    		//echo substr($tab[$i],0);
-    			
-  		}
+            //echo substr($tab[$i],0);
+          //}
   		
 	}
 

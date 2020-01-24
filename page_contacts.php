@@ -47,7 +47,6 @@ include 'src/header.php';
             echo "Veuillez réessayer SVP.";
         }
     }
-    return $bdd;
     ?>
 </section>   
 <?php include 'src/footer.php' ?>
