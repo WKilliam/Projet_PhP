@@ -22,7 +22,7 @@
     <div >
         <p class="mid">Avancement du projet: </p>
         <img class="avancement" src='imgFiles/avancement.png' />
-        <p class='cntr'> 10/16</p>
+        <p class='cntr'> 11/16</p>
     </div>
     <div>
         <p class="mid">Détail de l'avancement:</p>
@@ -31,7 +31,8 @@
                 <li>Story 11 abordée</li>
                 <li>Story 13 non abordée</li>
                 <li>Story 14 non abordée</li>
-                <li>Story 15 non abordée</li>
+                <li>Story 15 abordée</li>
+                <li>Story 16 non abordée</li>
             </ul>
         </div>
     </div>
